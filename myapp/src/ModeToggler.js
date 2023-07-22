@@ -5,7 +5,6 @@ import { ModeContext } from './ModeContext';
 
 const ModeToggler = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
-    // let darkModeOn = true;
 
     const toggleMode = () => {
         setIsDarkMode((prevMode) => !prevMode);
@@ -14,7 +13,6 @@ const ModeToggler = () => {
     return (
         <ModeContext.Provider value={{ isDarkMode, toggleMode }}>
             <div className={`mode-toggler ${isDarkMode ? 'dark' : 'light'}`}>
-
                 <Btn />
             </div>
         </ModeContext.Provider>

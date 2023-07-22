@@ -5,18 +5,15 @@ const Btn = () => {
   const { isDarkMode, toggleMode } = useContext(ModeContext);
 
   const clickHandler = () => {
-    toggleMode(); // Call the toggleMode function from the context to change the mode.
+    toggleMode(); 
   };
 
   return (
     <button
       onClick={clickHandler}
-      style={{
-        backgroundColor: isDarkMode ? "black" : "white",
-        color: isDarkMode ? "white" : "black",
-      }}
+      className={`switch-btn ${isDarkMode? "active": ""}`}
     >
-      Click me
+      <div className="switch"></div>
     </button>
   );
 };

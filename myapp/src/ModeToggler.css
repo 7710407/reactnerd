@@ -14,3 +14,46 @@
   background-color: black;
   color: white;
 }
+
+.switch-container {
+  position: relative;
+  width: 60px; /* Increase the width of the container to accommodate the button */
+  height: 30px; /* Increase the height of the container to accommodate the button */
+  border: 2px solid #ccc;
+  border-radius: 30px; /* Match the border radius with half the height to make it a circle */
+  overflow: hidden; /* Ensure the button stays within the container */
+}
+
+.switch-btn {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  background-color: white;
+  outline: none;
+  padding: 0;
+}
+
+.switch {
+  position: relative;
+  bottom: 1px;
+  right: 1px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: transform 0.3s ease-in-out;
+}
+
+.switch-btn.active {
+  background-color: #4caf50;
+}
+
+.switch-btn.active .switch {
+  transform: translateX(30px);
+  background-color: white;
+}
